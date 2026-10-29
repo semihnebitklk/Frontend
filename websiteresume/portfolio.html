@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <title>Kadir Goksel Gunduz - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #8399b1;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Layout */
+      .container {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 260px;
+        background-color: #152238;
+        color: white;
+        padding: 2rem;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+
+      .menu,
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .categories {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .sidebar a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        padding: 12px 16px;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar a:hover,
+      .sidebar a.active {
+        background: rgba(255, 255, 255, 0.1);
+        opacity: 1;
+      }
+
+      /* Main content */
+      .content {
+        flex: 1;
+        padding: 2rem 3rem 2rem 5rem;
+        background-color: #8399b1;
+      }
+
+      /* Projects page styles */
+      .projects-container {
+        padding-left: 4rem;
+      }
+
+      .year-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+
+      .project-entry {
+        margin-bottom: 1.8rem;
+        padding-left: 1.5rem;
+      }
+
+      .project-date {
+        display: block;
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 0.3rem;
+      }
+
+      .project-title {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .project-title:hover {
+        text-decoration: underline;
+      }
+
+      .project-description {
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+        padding-right: 2rem;
+      }
+
+      .bullet-list {
+        list-style-type: disc;
+        padding-left: 2.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .bullet-list li {
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        color: #000;
+      }
+
+      .year-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .project-title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-title {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      .project-title:hover {
+        text-decoration: underline;
+      }
+
+      .github-link {
+        display: inline-block;
+        align-items: center;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #333;
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+
+      .github-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 0.3rem;
+        vertical-align: middle;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+
+        .content {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h1 id="aboutMeTitle">Kadir Goksel GUNDUZ</h1>
+        </div>
+
+        <!-- Main menu - will be populated by JavaScript -->
+        <div class="menu" id="menuContainer"></div>
+
+        <!-- Contacts - will be populated by JavaScript -->
+        <div class="categories">
+          <h2 id="categoriesTitle">Contacts</h2>
+          <div id="contactsContainer"></div>
+        </div>
+
+        <!-- Resume link - will be populated by JavaScript -->
+        <div class="categories" id="resumeContainer"></div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="projects-container" id="portfolioProjectsContainer">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

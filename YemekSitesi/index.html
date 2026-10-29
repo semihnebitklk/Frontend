@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yemek Sitesi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>Lezzetli Yemekler</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Ana Sayfa</a></li>
+          <li><a href="#">Menüler</a></li>
+          <li><a href="#">Hakkında</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="search-container">
+      <input type="text" placeholder="Yemek Ara..." />
+      <button type="submit">Ara</button>
+    </div>
+
+    <div class="hero">
+      <h1>Lezzetli Yemeklerin Tek Adresi</h1>
+      <p>Lezzetli yemekler size bir tık uzakta...</p>
+      <a href="#yemekler" class="button">Yemekleri Yorumla</a>
+    </div>
+
+    <section class="promotion">
+      <h2 id="yemekler">İndirimli Yemekler</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="img/iskender.JPG" alt="İskender" />
+          <h3>İskender</h3>
+          <p>
+            Yoğurt ve tereyağı ile soslanmış döner üzerine yapılan lezzetli bir
+            yemek.
+          </p>
+          <span><del>400 TL</del> &nbsp; 385 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+        </div>
+        <div class="menu-item">
+          <img src="img/adana-kebap.jpg" alt="Adana Kebap" />
+          <h3>Adana Kebap</h3>
+          <p>
+            İnce kıyılmış kuzu etiyle yapılan ve közlenmiş biberle servis edilen
+            lezzetli bir yemek.
+          </p>
+          <span><del>300 TL</del> &nbsp; 235 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+        </div>
+        <div class="menu-item">
+          <img src="img/lahmacun.jpg" alt="Lahmacun" />
+          <h3>Lahmacun</h3>
+          <p>
+            İnce hamur üzerine kıymalı harcın yayılmasıyla yapılan ve fırında
+            pişirilen lezzetli bir yemek.
+          </p>
+          <span><del>120 TL</del> &nbsp; 90 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2>Popüler Yemekler</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="img/icli-kofte.jpg" alt="İçli Köfte" />
+          <h3>İçli Köfte</h3>
+          <p>
+            İç harcı bulunan köftelerin bulgur ile kaplanması ve kızartılmasıyla
+            yapılan bir yemektir.
+          </p>
+          <span>120 TL</span>
+          <button class="order-button">Sipariş Ver</button>
+          <span class="tag">Popüler</span>
+        </div>
+        <div class="menu-item">
+          <img src="img/firinda-patates.jpg" alt="Fırında Patates" />
+          <h3>Fırında Patates</h3>
+          <p>
+            Patatesin dilimlenip fırınlanmasıyla yapılan lezzetli bir yemektir.
+          </p>
+          <span>110 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+          <span class="tag">Popüler</span>
+        </div>
+        <div class="menu-item">
+          <img src="img/mevsim-salata.jpg" alt="Mevsim Salata" />
+          <h3>Mevsim Salata</h3>
+          <p>
+            Mevsim sebzelerinin doğranıp karıştırılmasıyla yapılan lezzetli bir
+            salatadır.
+          </p>
+          <span>100 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+          <span class="tag">Popüler</span>
+        </div>
+        <div class="menu-item">
+          <img src="img/beyran-corbasi.jpg" alt="Beyran Çorbası" />
+          <h3>Beyran Çorbası</h3>
+          <p>
+            Kuzu eti ve pirincin bir araya gelmesiyle yapılan lezzetli bir
+            çorbadır.
+          </p>
+          <span>230 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+          <span class="tag">Popüler</span>
+        </div>
+        <div class="menu-item">
+          <img src="img/imam-bayildi.jpg" alt="İmam Bayıldı" />
+          <h3>İmam Bayıldı</h3>
+          <p>
+            Patlıcanın iç harcı ile doldurulup fırınlanmasıyla yapılan bir
+            yemektir.
+          </p>
+          <span>285 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+          <span class="tag">Popüler</span>
+        </div>
+        <div class="menu-item">
+          <img src="img/karniyarik.jpg" alt="Karnıyarık" />
+          <h3>Karnıyarık</h3>
+          <p>
+            Patlıcanın kıymalı harç ile doldurulup pişirilmesiyle yapılan
+            geleneksel bir yemektir.
+          </p>
+          <span>450 TL</span>
+          <button class="order-button">Yemeği Yorumla</button>
+          <span class="tag">Popüler</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Lezzetli Yemekler. Tüm hakları saklıdır.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <title>Kadir Goksel Gunduz - Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #8399b1; /* Blue-gray background from image */
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Layout */
+      .container {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 260px;
+        background-color: #152238; /* Dark blue from image */
+        color: white;
+        padding: 2rem;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+
+      .menu,
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .categories {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .sidebar a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        padding: 12px 16px;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar a:hover,
+      .sidebar a.active {
+        background: rgba(255, 255, 255, 0.1);
+        opacity: 1;
+      }
+
+      /* Main content */
+      .content {
+        flex: 1;
+        padding: 2rem 3rem 2rem 5rem; /* Increased left padding to shift content right */
+        background-color: #8399b1; /* Blue-gray background */
+      }
+
+      /* Experiences page styles */
+      .experiences-container {
+        padding-left: 4rem; /* Added padding to shift all content to the right */
+      }
+
+      .year-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        color: #000;
+        text-align: left; /* Adjusted to match image */
+      }
+
+      .experience-entry {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem; /* Indentation from image */
+      }
+
+      .experience-date {
+        display: block;
+        font-size: 0.9rem;
+        color: #333; /* Darker to match image */
+        margin-bottom: 0.3rem;
+      }
+
+      .experience-title {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: #000; /* Darker to match image */
+        text-decoration: none;
+      }
+
+      .experience-title:hover {
+        text-decoration: underline;
+      }
+
+      .experience-company {
+        display: block;
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 0.8rem;
+      }
+
+      .experience-description {
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+        padding-right: 2rem;
+      }
+
+      .bullet-list {
+        list-style-type: disc;
+        padding-left: 2.5rem; /* More indentation for bullets */
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .bullet-list li {
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        color: #000; /* Darker text for bullets */
+      }
+
+      .year-section {
+        margin-bottom: 2.5rem;
+        position: relative;
+      }
+
+      /* Thicker line separator after each year section except the last one */
+      .year-section:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -1.25rem;
+        left: 0;
+        width: 90%;
+        height: 2px;
+        background-color: #333;
+        opacity: 0.6;
+      }
+
+      /* Thin line separator between experience entries except the last one in each section */
+      .experience-entry {
+        position: relative;
+      }
+
+      .experience-entry:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background-color: #333;
+        opacity: 0.3;
+      }
+
+      /* Company link styles */
+      .company-link {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px dotted #555;
+        transition: all 0.2s ease;
+      }
+
+      .company-link:hover {
+        color: #3498db;
+        border-bottom: 1px solid #3498db;
+      }
+
+      .company-link i {
+        font-size: 0.8rem;
+        margin-left: 4px;
+        opacity: 0.7;
+      }
+
+      /* Company icon styles */
+      .company-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        margin-left: 5px;
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .company-icon:hover {
+        background: #3498db;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .company-icon i {
+        font-size: 0.7rem;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+
+        .content {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h1 id="aboutMeTitle">Kadir Goksel GUNDUZ</h1>
+        </div>
+
+        <!-- Main menu - will be populated by JavaScript -->
+        <div class="menu" id="menuContainer"></div>
+
+        <!-- Contacts - will be populated by JavaScript -->
+        <div class="categories">
+          <h2 id="categoriesTitle">Contacts</h2>
+          <div id="contactsContainer"></div>
+        </div>
+
+        <!-- Resume link - will be populated by JavaScript -->
+        <div class="categories" id="resumeContainer"></div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="experiences-container" id="experiencesContainer">
+          <!-- Experiences will be populated by JavaScript -->
+        </div>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+/* Genel gövde ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f23;
+    color: white;
+    display: flex;
+  }
+  
+  /* Sol sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #1c1c2e;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+  }
+  
+  /* Sidebar başlık */
+  .sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  /* Sidebar bağlantıları */
+  .sidebar nav a {
+    display: block;
+    padding: 10px 0;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar nav a:hover,
+  .sidebar nav a.active {
+    color: white;
+  }
+  
+  /* Sidebar alt kısmı (sosyal bağlantılar) */
+  .contacts {
+    margin-top: auto;
+  }
+  
+  .contacts a {
+    display: block;
+    color: #bbb;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .contacts a:hover {
+    color: white;
+  }
+  
+  /* Sağ içerik alanı */
+  .content {
+    margin-left: 250px;
+    padding: 40px;
+    flex-grow: 1;
+  }
+  
+  /* Başlık ve açıklama */
+  .content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .content h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #bbb;
+  }
+  
+  .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  /* Profil fotoğrafı */
+  .profile-img {
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  
+  /* Bölüm başlığı */
+  .section-title {
+    margin-top: 50px;
+    font-size: 22px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: white;
+  }
+  
